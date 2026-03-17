@@ -1,0 +1,20 @@
+-- Criação da tabela LIVROS (bloco inicial solicitado)
+CREATE TABLE LIVROS (
+    ID_LIVRO INT PRIMARY KEY,
+    NOME_LIVRO VARCHAR(100) NOT NULL,
+    AUTORIA VARCHAR(100) NOT NULL,
+    EDITORA VARCHAR(100) NOT NULL,
+    CATEGORIA VARCHAR(50) NOT NULL,
+    PRECO DECIMAL(6,2) NOT NULL
+);
+
+-- Inserindo valores fora de ordem (especificando as colunas explicitamente)
+INSERT INTO LIVROS
+(CATEGORIA, AUTORIA, NOME_LIVRO, EDITORA, ID_LIVRO, PRECO)
+VALUES
+('Biografia', 'Malala Yousafzai', 'Eu sou Malala', 'Companhia das Letras', 11, 22.32),
+('Biografia', 'Michelle Obama', 'Minha história', 'Objetiva', 12, 57.90),
+('Biografia', 'Anne Frank', 'Diário de Anne Frank', 'Pe Da Letra', 13, 34.90);
+
+-- Comando para exibir a tabela completa após as inserções
+SELECT * FROM LIVROS;
