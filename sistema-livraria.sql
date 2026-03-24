@@ -12,3 +12,5 @@ CREATE TABLE IF NOT EXISTS Compras (
     NomeLivro VARCHAR(200) NOT NULL,
     FOREIGN KEY (ClienteID) REFERENCES Clientes(ID)
 );
+
+SELECT * FROM Clientes;
